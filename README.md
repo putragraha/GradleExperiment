@@ -1,7 +1,6 @@
 # Gradle Build Tools Fundamental
 
-Learn the fundamental of gradle
-In this project we'll utilize Android Project to learn gradle fundamental
+Learn the fundamental of gradle. In this project we'll utilize Java Project to learn gradle fundamental
 
 ## Table of Contents
 
