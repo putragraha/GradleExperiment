@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 sourceSets {
@@ -13,4 +13,8 @@ sourceSets {
             srcDir 'custom/test'
         }
     }
+}
+
+application {
+    mainClassName 'Main'
 }
