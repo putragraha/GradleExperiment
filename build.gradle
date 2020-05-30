@@ -1,3 +1,13 @@
 plugins {
     id 'java'
 }
+
+task hello {
+    print "Hello, "
+}
+
+task world {
+    dependsOn hello
+
+    println "World"
+} 
