@@ -2,6 +2,12 @@ plugins {
     id 'java'
 }
 
+repositories {
+    flatDir {
+        dirs = ['lib']
+    }
+}
+
 dependencies {
-    implementation files ('lib/junit-4.13.jar')
+    implementation 'junit:junit:4.13'
 }
