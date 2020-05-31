@@ -1,3 +1,9 @@
+buildscript {
+    ext {
+        junitVersion = 4.13
+    }
+}
+    
 plugins {
     id 'java'
 }
