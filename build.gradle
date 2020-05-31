@@ -3,8 +3,8 @@ plugins {
 }
 
 sourceSets {
-    main.java.srcDir 'custom/code'
-    test.java.srcDir 'custom/test'
+    main.java.srcDirs = ['custom/code']
+    test.java.srcDirs = ['custom/test']
 }
 
 application {
