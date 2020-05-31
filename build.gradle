@@ -1,3 +1,16 @@
-plugins {
-    id 'java'
+// We may specify plugin to be used for each projects in this multi-project build
+allprojects {
+    apply plugin: 'java'
 }
+
+// This will mark that all projects in this multi-project build will be in this version
+version = '1.0-SNAPSHOT'
+
+// We may specify each project dependency here or innner build.gradle of the project
+project(':app'){
+    dependencies {
+        implementation project(':user-service')
+    }
+}
+
+project(':user-service'){}
