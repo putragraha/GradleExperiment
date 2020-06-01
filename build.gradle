@@ -1,6 +1,8 @@
-// We may specify plugin to be used for each projects in this multi-project build
-allprojects {
-    apply plugin: 'java'
+// We can specify projects that may applying plugin
+['user-service', 'cashier-service'].each { name ->
+    project(":$name") {
+        apply plugin: 'java'
+    }
 }
 
 // This will mark that all projects in this multi-project build will be in this version

@@ -1,1 +1,1 @@
-include 'app', 'user-service'
+include 'app', 'user-service', 'cashier-service'
