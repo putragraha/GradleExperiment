@@ -9,10 +9,21 @@ repositories {
     jcenter()
 }
 
-test {
-    useJUnitPlatform()
-    testLogging {
-        events TestLogEvent.FAILED, TestLogEvent.SKIPPED, TestLogEvent.PASSED
+task singleTest (type: Test) {
+    group = "Verification"
+    description = "Runs a single test"
+
+    dependsOn testClasses
+
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events TestLogEvent.FAILED, TestLogEvent.SKIPPED, TestLogEvent.PASSED
+        }
+    }
+
+    filter {
+        includeTestsMatching "ObjectUtilTest.isExist_shouldReturn_true"
     }
 }
 
