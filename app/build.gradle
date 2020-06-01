@@ -1,12 +1,3 @@
-plugins {
-    id 'java'
-}
-
-repositories {
-    jcenter()
-}
-
 dependencies {
     implementation project(':user-service')
-    implementation 'log4j:log4j:1.2.17'
 }

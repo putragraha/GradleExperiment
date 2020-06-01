@@ -1,9 +1,15 @@
-// We can specify projects that may applying plugin
-['user-service', 'cashier-service'].each { name ->
-    project(":$name") {
-        apply plugin: 'java'
-    }
-}
-
 // This will mark that all projects in this multi-project build will be in this version
 version = '1.0-SNAPSHOT'
+
+// Enable all subprojects execute below syntax
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        implementation 'log4j:log4j:1.2.17'
+    }
+}
